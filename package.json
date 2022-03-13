@@ -1,0 +1,37 @@
+{
+  "name": "wxp-js-essay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint:script": "eslint --ext .ts examples",
+    "lint": "npm run lint:script -- --fix",
+    "lint:ci": "npm run lint:script -- --max-warnings 0",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxpwxpwxp/wxp-js-essay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wxpwxpwxp/wxp-js-essay/issues"
+  },
+  "homepage": "https://github.com/wxpwxpwxp/wxp-js-essay#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.12",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.2",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.1.3"
+  }
+}

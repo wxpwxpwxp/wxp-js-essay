@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "sourceMap": true,
+    "declaration": true,
+    "rootDir": ".",
+    "outDir": "./dist",
+    "strict": true,
+    "pretty": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+  "include": [
+    "examples",
+    "babel.config.js",
+    "jest.config.cjs",
+    ".eslintrc.cjs"
+  ],
+  "compileOnSave": true
+}
