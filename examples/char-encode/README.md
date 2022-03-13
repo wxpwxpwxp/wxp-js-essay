@@ -29,7 +29,7 @@ new TextEncoder().encode('张')
 
 ```js
 // decode
-var buffer = new Int8Array([229, 188, 160])
+var buffer = new Uint8Array([229, 188, 160])
 new TextDecoder().decode(buffer)
 > '张'
 ```
