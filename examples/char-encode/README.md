@@ -8,12 +8,12 @@
 * Unicode Transformation Format 简称 utf
 * 变长
 
-![binary & utf8 conversion]()
+![binary & utf8 conversion](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/binary%20%26%20utf8%20conversion.png)
 
 一个标准的 unicode 用二字节表示，但是对于都是 ascii 码表示的字符串，首字节八位都是 0，转换为 utf-8 只需要一字节
 
 ## 2. encode & decode in browser
-![encode utf example of zhang]()
+![encode utf example of zhang](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/encode%20utf%20example%20of%20zhang.png)
 
 ```js
 // encode
@@ -25,7 +25,7 @@
 new TextEncoder().encode('张')
 > Uint8Array(3)[229, 188, 160]
 ```
-![decode utf example of zhang]()
+![decode utf example of zhang](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/decode%20utf%20example%20of%20zhang.png)
 
 ```js
 // decode
@@ -42,4 +42,4 @@ js 用 两字节 表示 unicode，最多有 65535 个字符，但是 unicode 有
 
 如果低代理后面没有高代理，或者高代理前面没有低代理，字符会被会修改为 \uFFFD (�)
 
-![unpaired surrogate code units]()
+![unpaired surrogate code units](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/unpaired%20surrogate%20code%20units.png)
