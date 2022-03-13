@@ -36,6 +36,8 @@ new TextDecoder().decode(buffer)
 ## 3.[usvstring](https://developer.mozilla.org/en-US/docs/Web/API/USVString)
 js 用 两字节 表示 unicode，最多有 65535 个字符，但是 unicode 有 14 w 个字符，此时可以引入 **paired surrogate code units**（高低代理对）的概念
 
+关于高低代理对请参考 https://www.lighttag.io/blog/unicode-surrogate-pairs/ 在此就不赘述了
+
 低代理对：\uD800~\uDBFF
 
 高代理对：\uDC00~\uDFFF
