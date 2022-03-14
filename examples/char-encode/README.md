@@ -46,4 +46,8 @@ js 用 两字节 表示 unicode，最多有 65535 个字符，但是 unicode 有
 
 ![unpaired surrogate code units](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/unpaired%20surrogate%20code%20units.png)
 
-这里需要注意一点大部分 js 自身的 binary to string，大部分输出都是 domstring, usvstring 标准的，因此如果二进制数据中存在不成对的代理对，就会出现原二进制会被破坏
+这里需要注意一点大部分 js 自身的 binary to string，输出都是 domstring, usvstring 标准的，因此如果二进制数据中存在不成对的代理对，就会出现原二进制会被破坏
+
+如下 textDecoder 的 decode 输出就是 usvstring
+
+![usvstring for textdecoder](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/usvstring%20for%20textdecoder.png)
