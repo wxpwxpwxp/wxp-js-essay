@@ -1,10 +1,13 @@
-本文只是简单介绍下浏览器中的常见编解码
+# 本文只是简单介绍下浏览器中的常见编解码
+
 ## 1. why encode?
 
 ### [unicode](https://en.wikipedia.org/wiki/Unicode)
+
 统一编码目前已收集超过 14 w 个字符
 
 ### [uft-8](https://en.wikipedia.org/wiki/UTF-8)
+
 * Unicode Transformation Format 简称 utf
 * 变长
 
@@ -13,6 +16,7 @@
 一个标准的 unicode 用二字节表示，但是对于都是 ascii 码表示的字符串，首字节八位都是 0，转换为 utf-8 只需要一字节
 
 ## 2. encode & decode in browser
+
 ![encode utf example of zhang](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/encode%20utf%20example%20of%20zhang.png)
 
 ```js
@@ -53,6 +57,7 @@ js 用 两字节 表示 unicode，最多有 65535 个字符，但是 unicode 有
 ![usvstring for textdecoder](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/usvstring%20for%20textdecoder.png)
 
 ### 更新
+
 我一直以为是 textDecoder 将 \ud83d to \ufffd
 
 写单测的时候发现 textEecoder 也会将输入的 string 变成 usvstring 规范的
