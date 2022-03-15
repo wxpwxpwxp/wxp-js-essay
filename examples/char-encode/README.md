@@ -51,3 +51,24 @@ js 用 两字节 表示 unicode，最多有 65535 个字符，但是 unicode 有
 如下 textDecoder 的 decode 输出就是 usvstring
 
 ![usvstring for textdecoder](https://github.com/wxpwxpwxp/wxp-js-essay/blob/master/examples/char-encode/screensnaps/usvstring%20for%20textdecoder.png)
+
+### 更新
+我一直以为是 textDecoder 将 \ud83d to \ufffd
+
+写单测的时候发现 textEecoder 也会将输入的 string 变成 usvstring 规范的
+
+
+```js
+'\ud83d'.charCodeAt()
+> 55357
+// 55357 => 1101100000111101
+// 1101 1000 0011 1101 => 11101101 10100000 10111101
+// 1101 1000 0011 1101 => 237 160 189
+new TextEncoder().encode('\ud83d')
+> Uint8Array(3)[239, 191, 189]
+new TextEncoder().encode('\ufffd')
+> Uint8Array(3)[239, 191, 189]
+var buffer = new Uint8Array([237, 160, 189])
+new TextDecoder().decode(buffer)
+> '���' ??? 这里怎么变成三个 � 了
+```

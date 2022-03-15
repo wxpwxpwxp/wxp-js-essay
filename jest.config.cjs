@@ -5,6 +5,6 @@ module.exports = {
   // from the above list
   preset: 'ts-jest',
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  testEnvironment: 'jsdom',
+  testEnvironment: '<rootDir>/custom-test-env.js',
   transform: {},
 };
