@@ -75,5 +75,5 @@ new TextEncoder().encode('\ufffd')
 > Uint8Array(3)[239, 191, 189]
 var buffer = new Uint8Array([237, 160, 189])
 new TextDecoder().decode(buffer)
-> '���' ??? 这里怎么变成三个 � 了
+> '���' ??? 这里怎么变成三个 � 了，看起来应该是把每一个不符合代理对的字节都变成了二字节的 \ufffd
 ```
