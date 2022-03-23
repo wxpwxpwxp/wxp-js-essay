@@ -141,6 +141,16 @@ export default defineComponent({
 }
 ```
 
+最终结果
+
+```js
+import { render } from './chenqu?vue&type=template'
+import script from './chenqu?vue&type=script'
+script.render = render
+
+export * from './chenqu.js?vue&type=script'
+```
+
 ## create sfc & mount in browser
 
 理解 vue3 工作了解下以下几个函数
