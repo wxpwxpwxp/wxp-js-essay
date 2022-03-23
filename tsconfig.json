@@ -12,6 +12,8 @@
     "removeComments": false,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "allowJs": true,
+    "skipLibCheck": true,
     "lib": [
       "esnext",
       "DOM"
@@ -23,10 +25,10 @@
   ],
   "include": [
     "examples",
-    "babel.config.js",
-    "jest.config.cjs",
     ".eslintrc.cjs",
-    "custom-test-env.js"
+    "babel.config.cjs",
+    "custom-test-env.cjs",
+    "jest.config.cjs"
   ],
   "compileOnSave": true
 }
